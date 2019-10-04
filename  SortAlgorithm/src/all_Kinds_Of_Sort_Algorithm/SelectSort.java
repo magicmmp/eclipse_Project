@@ -1,10 +1,9 @@
 package all_Kinds_Of_Sort_Algorithm;
 
 /**
-  *选择排序 (Selection sort) 的基本思想是：每一趟在后面 n-i(i=1, 2, …, n-2) 个元素中选取最小的元
-  *                                                                                       素作为有序序列的第 i 个元素。
- * 
- *
+  *选择排序 (Selection sort) 的基本思想是：
+  *每一趟在后面 n-i(i=1, 2, …, n-2) 个元素中选取最小的元
+  *素作为有序序列的第 i 个元素。
  */
 
 public class SelectSort 
