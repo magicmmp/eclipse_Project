@@ -4,9 +4,6 @@ package abstract_class_test;
 public abstract class Shape 
 {
 	private String color;
-	
-	
-	
 
 	//抽象类的构造函数，用于在子类被调用
 	public Shape() {}
@@ -26,11 +23,9 @@ public abstract class Shape
 	//返回图形的类型
 	public abstract String getType();
 	
-	
-
 	public void setColor(String color) 
 	{
 		this.color = color;
 	}
-
+	
 }

@@ -9,9 +9,6 @@ public class Circle extends Shape {
 		this.radius=radius;
 	}
 
-	/**
-	 * @param radius the radius to set
-	 */
 	public void setRadius(double radius) {
 		this.radius = radius;
 	}
