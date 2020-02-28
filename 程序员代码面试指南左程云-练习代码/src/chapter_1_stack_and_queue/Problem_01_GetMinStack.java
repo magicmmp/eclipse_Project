@@ -37,11 +37,11 @@ class GetMinStack {
 	}
 }	
 
-//网上提交时，把此类名改为Main
+//在牛客网提交时，把此类名改为Main
 public class Problem_01_GetMinStack {
 
 	public static void main(String[] args) throws IOException {
-		//网上提交用这句
+		//在牛客网提交时用这句
 		//BufferedReader scanner = new BufferedReader(new InputStreamReader(System.in));
 		//本地文件模拟测试数据  用这句
 		BufferedReader scanner = new BufferedReader(new FileReader("GetMinStack的输入数据.txt"));
