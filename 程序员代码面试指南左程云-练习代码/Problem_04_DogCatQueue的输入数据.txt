@@ -1,0 +1,12 @@
+11
+add cat 1
+add dog 2
+pollAll
+isEmpty
+add cat 5
+isDogEmpty
+pollCat
+add dog 10
+add cat 199
+pollDog
+pollAll
