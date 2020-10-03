@@ -12,7 +12,7 @@
 	</delete>
 
 	<update id="updateNews" parameterType="mapper.News">
-		update news_inf set news_title = #{news_title}, news_content = #{content} where news_id= #{id}
+		update news_inf set news_title = #{title}, news_content = #{content} where news_id= #{id}
 	</update>
 
 	<select id="getNews"  resultType="mapper.News">

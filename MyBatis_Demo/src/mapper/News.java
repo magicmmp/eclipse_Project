@@ -1,5 +1,8 @@
 package mapper;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("fNews")
 public class News {
 	private Integer id;
 	private String title;
@@ -38,7 +41,7 @@ public class News {
 
 	@Override
 	public String toString() {
-		return "News [id=" + id + ", title=" + title + ", content=" + content + "]";
+		return "News id=" + id + ", title=" + title + ", content=" + content ;
 	}
 	
 	
