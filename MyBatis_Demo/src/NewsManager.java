@@ -26,14 +26,15 @@ public class NewsManager {
 		sqlSessionFactory=new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession sqlSession=sqlSessionFactory.openSession();
 		
-		//insertTest(sqlSession,1,10);//插入多条记录
-		for(int i=200;i<250;i++)
+		//insertTest(sqlSession,10,1);//插入多条记录
+		//insertByProcedureTest(sqlSession,10);//利用存储过程插入多条记录
+		for(int i=1;i<41;i++)
 			selectTest(sqlSession, i);
 		
 		for(int i=1;i<0;i++)
 			updateTest(sqlSession, i,"被更新的标题"+i,"被更新的内容"+i);
 		
-		for(int i=50;i<0;i++)
+		for(int i=10;i<0;i++)
 			deleteTest(sqlSession,i);
 		
 		
@@ -64,6 +65,20 @@ public class NewsManager {
 
 		System.out.println("插入了"+nLine+"条记录。");
 
+	}
+	
+	public static void insertByProcedureTest(SqlSession sqlSession,int nLine)
+	{
+		News news =new News();
+		NewsMapper newsMapper=sqlSession.getMapper(NewsMapper.class);
+		for(int i=0;i<nLine;i++)
+		{
+			news.setId(888888);
+			news.setTitle("标题_利用存储过程插入"+i);
+			news.setContent("内容_利用存储过程插入"+i);
+			newsMapper.saveNewsByProcedure(news);
+			System.out.println("新插入的记录id为："+news.getId());
+		}
 	}
 	
 	public static void updateTest(SqlSession sqlSession,int id,String title,String content)

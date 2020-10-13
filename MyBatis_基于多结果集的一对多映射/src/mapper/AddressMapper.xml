@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.AddressMapper">
+
+	<select id="findAddressById" resultSets="addrs,persons" resultMap="addrMap" statementType="CALLABLE">
+		{call p_get_address_person(#{id,mode=IN,jdbcType=INTEGER})}
+	</select>
+
+	<resultMap type="mapper.Address" id="addrMap">
+		<id property="id" column="addr_id"/>
+		
+		<result property="detail" column="addr_detail"/>
+		
+		<association property="person" javaType="mapper.Person"
+		resultSet="persons" column="owner_id" foreignColumn="person_id"
+		resultMap="mapper.PersonMapper.personMap"
+		/>
+	
+	</resultMap>
+
+</mapper>

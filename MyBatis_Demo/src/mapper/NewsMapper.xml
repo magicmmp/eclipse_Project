@@ -4,7 +4,11 @@
 <mapper namespace="mapper.NewsMapper">
 
 	<insert id="saveNews" parameterType="mapper.News">
-		insert into news_inf values(null,#{title}, #{content})
+		insert into news_inf values(#{id},#{title}, #{content})
+	</insert>
+
+	<insert id="saveNewsByProcedure" statementType="CALLABLE">
+		{call p_insert_news(#{id,mode=OUT,jdbcType=INTEGER},#{title}, #{content})}
 	</insert>
 
 	<delete id="deleteNews" parameterType="int">
