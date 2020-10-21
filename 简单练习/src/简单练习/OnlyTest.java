@@ -14,6 +14,15 @@ class Parent implements Runnable
 		// TODO Auto-generated method stub
 		
 	}
+	//可变参数本质是数组
+	public void test(int ...arr)
+	{
+		System.out.println("数组有"+arr.length+"个元素：");
+		for(int i : arr)
+		{
+			System.out.println(i);
+		}
+	}
 }
 
 class Child extends Parent
@@ -24,6 +33,8 @@ class Child extends Parent
 		System.out.println("我是子类 Child");
 		System.out.println("i="+i+" ,j="+j);
 	}
+	
+	
 }
 
 
@@ -43,6 +54,9 @@ public class OnlyTest {
 		c.f();
 		
 		System.out.println("c.getClass() ="+c.getClass());
+		
+		p.test(1,2,3,4,5);
+		p.test(new int[]{1,2});
 	
 		
 
