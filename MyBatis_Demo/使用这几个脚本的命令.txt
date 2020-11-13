@@ -1,5 +1,5 @@
- 
-
+ source E:/eclipse_Project/MyBatis_Demo/create_tables.sql;
+source E:/eclipse_Project/MyBatis_Demo/populate_records.sql;
 
 source E:/eclipse_Project/MyBatis_Demo/insertByProcedure.sql;
 
