@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 配置一个 bean -->
+	<bean id="address" class="hehe.Address">
+		<!-- 为属性赋值 -->
+		<property name="info" value="BeiJing"></property>
+	</bean>
+	
+	<bean id="person" class="hehe.Person">
+		<property name="name" value="张飞"></property>
+		<property name="age" value="29"></property>
+		<property name="address" ref="address"></property>
+	
+	</bean>
+
+
+</beans>
