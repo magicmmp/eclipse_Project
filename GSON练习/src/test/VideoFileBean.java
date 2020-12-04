@@ -66,10 +66,7 @@ public class VideoFileBean {
 			fileName=videoInfo.getTitle();
 		}
 		fileName=fileName.replace(" ","+");//去掉文件名中的空格，否则Ffmpeg不能转换
-		
-		if(fileName.length()<3)
-			fileName+="_"+System.currentTimeMillis();//文件名太短时，附上时间戳防止同名
-		fileName=index+"_"+fileName;
+		fileName+="_"+(videoInfo.getDownloaded_bytes()%10000);//附上文件字节数防止同名
 		tmpFile=new File(DestinationFolder, fileName+".mp4");//本视频文件保存的绝对路径
 		command+=tmpFile.getAbsolutePath();
 		
