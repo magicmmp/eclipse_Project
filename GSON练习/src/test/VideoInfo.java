@@ -22,14 +22,19 @@ public class VideoInfo {
 	private boolean interrupt_transform_temp_file;
 	private String quality_pithy_description;
 	private String quality_superscript;
-	
 	private int cache_version_code;
+	
+	
 	private int avid;
 	private int spid;
 	private int seasion_id;
 	private String bvid;
 	private int owner_id;
 	private Page_data page_data;
+	private Source source;
+	private Ep ep;
+	
+	
 	public int getMedia_type() {
 		return media_type;
 	}
@@ -179,6 +184,18 @@ public class VideoInfo {
 	}
 	public void setPage_data(Page_data page_data) {
 		this.page_data = page_data;
+	}
+	public Source getSource() {
+		return source;
+	}
+	public void setSource(Source source) {
+		this.source = source;
+	}
+	public Ep getEp() {
+		return ep;
+	}
+	public void setEp(Ep ep) {
+		this.ep = ep;
 	}
 	@Override
 	public String toString() {

@@ -180,7 +180,9 @@ public class GsonTest {
 			try 
 			{
 				Process p = Runtime.getRuntime().exec(command);
+				//System.out.println(video_no+" 等待p.waitFor()函数返回");
 				p.waitFor();//等待任务完成
+				//System.out.println(video_no+" p.waitFor()函数已经返回");
 				if (p.exitValue() == 0) 
 				{
 				    System.out.println(video_no+":视频合并成功："+video.fileName);

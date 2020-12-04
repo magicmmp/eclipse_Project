@@ -57,16 +57,25 @@ public class VideoFileBean {
 		command+=" -acodec copy -vcodec copy -y ";
 		File tmpFile;
 		
-		if(videoInfo.getPage_data().getPart()!=null)
+		
+		if(videoInfo.getPage_data()!=null && videoInfo.getPage_data().getPart()!=null)
 		{
 			fileName=videoInfo.getPage_data().getPart();
+		}
+		else if(videoInfo.getEp()!=null && videoInfo.getEp().getIndex()!=null)
+		{
+			fileName=videoInfo.getEp().getIndex();
+			fileName+=videoInfo.getEp().getIndex_title();
 		}
 		else 
 		{
 			fileName=videoInfo.getTitle();
 		}
 		fileName=fileName.replace(" ","+");//去掉文件名中的空格，否则Ffmpeg不能转换
+		fileName=fileName.replace(":","+");//去掉文件名中的空格，否则Ffmpeg不能转换
 		fileName+="_"+(videoInfo.getDownloaded_bytes()%10000);//附上文件字节数防止同名
+		//fileName=index+"_"+videoInfo.getDownloaded_bytes();//附上文件字节数防止同名
+		//fileName=index+"_"+fileName;
 		tmpFile=new File(DestinationFolder, fileName+".mp4");//本视频文件保存的绝对路径
 		command+=tmpFile.getAbsolutePath();
 		
