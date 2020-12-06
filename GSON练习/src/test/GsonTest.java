@@ -30,6 +30,10 @@ public class GsonTest {
 	
 	
 	//sourceFolder
+	/**
+	 * @param sourceFolder 待转换的缓存视频文件夹路径
+	 * @return 所有视频文件的路径信息，用于生成ffmpeg命令
+	 */
 	public static HashSet<VideoFileBean> getVideoFiles(String sourceFolder) 
 	{
 		File dirFile=new File(sourceFolder);
