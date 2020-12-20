@@ -215,8 +215,8 @@ public class GsonTest {
 	public static void main(String[] args) throws Exception
 	{
 		
-		HashSet<VideoFileBean> videos=getVideoFiles("D:\\BiLi_Vedio");//提取待转换的文件的路径信息
-		merging_video_and_audio("D:\\OutPutVideo",videos);//转换视频的输出文件夹
+		HashSet<VideoFileBean> videos=getVideoFiles("D:\\BiLi_Vedio2");//提取待转换的文件的路径信息
+		merging_video_and_audio("D:\\OutPutVideo2",videos);//转换视频的输出文件夹
 	
 
 	}
