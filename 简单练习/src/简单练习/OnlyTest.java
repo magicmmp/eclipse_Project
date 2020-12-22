@@ -1,5 +1,10 @@
 package ¼òµ¥Á·Ï°;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+//import java.text.SimpleDateFormat;
 
 class Parent implements Runnable
 {
@@ -57,6 +62,10 @@ public class OnlyTest {
 		
 		p.test(1,2,3,4,5);
 		p.test(new int[]{1,2});
+		
+		
+		
+		System.out.println();
 	
 		
 
