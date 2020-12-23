@@ -13,7 +13,6 @@ class MySocketThread extends Thread{
 	int threadNo;
 	public MySocketThread(Socket socket,int threadNo)
 	{
-		super();
 		this.socket=socket;
 		this.threadNo=threadNo;
 	}
